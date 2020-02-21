@@ -26,7 +26,10 @@ function App() {
   //This is a dependency array => React looks at this array to see if any data has changed. If it has, then React will execute the fallback function and update the data.
   //Empty-dependency array can't change allowing this effect to run once on page load. 
 
-  
+  //Stretch: make time display in hh:mm:ss
+  const secondsDisplay = (seconds % 60).toString().padStart(2, '0')
+  // console.log(secondsDisplay)
+  const minutesDisplay = Math.floor(seconds / 60).toString().padStart(2, '0')
 
 
   return (
@@ -34,7 +37,7 @@ function App() {
       {/* <button onClick={() => setSeconds(seconds + 1)} > inc seconds</button> */}
       <div className={classnme('time-circle', !isRunning && 'paused')}>
         <div className="time">
-          {seconds}
+          {minutesDisplay}:{secondsDisplay}
         </div>
       </div>
       <div className="buttons">
