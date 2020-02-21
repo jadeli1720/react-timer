@@ -1,6 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import './App.scss';
 
+//this allows us to set up multiple classNames conditionals w.out adding a long of inline if statement with in the className property. 
+const classnme = (...args) => {
+  return args.filter(x => x).join(" ")
+}
+
 function App() {
   const [seconds, setSeconds] = useState(0);
   const [isRunning, setIsRunning] = useState(false);
@@ -21,11 +26,13 @@ function App() {
   //This is a dependency array => React looks at this array to see if any data has changed. If it has, then React will execute the fallback function and update the data.
   //Empty-dependency array can't change allowing this effect to run once on page load. 
 
+  
+
 
   return (
     <div className="app">
       {/* <button onClick={() => setSeconds(seconds + 1)} > inc seconds</button> */}
-      <div className='time-circle'>
+      <div className={classnme('time-circle', !isRunning && 'paused')}>
         <div className="time">
           {seconds}
         </div>

@@ -8,16 +8,16 @@ We will be learning about how `useState` modifies values, how `useEffect` allows
 
 ## Goals
 
-* [ ] Create a working timer. It should start counting when the page loads via `useEffect`.
-* [ ] Track the number of seconds with `useState`.
-* [ ] Have a 'pause' button stop the timer.
-* [ ] Have a 'play' button re-start the timer.
-* [ ] Have a 'reset' button clear and stop the timer.
+* [x] Create a working timer. It should start counting when the page loads via `useEffect`.
+* [x] Track the number of seconds with `useState`.
+* [x] Have a 'pause' button stop the timer.
+* [x] Have a 'play' button re-start the timer.
+* [x] Have a 'reset' button clear and stop the timer.
 
 ## Stretch Goals
 
-* [ ] Display the pause button when the timer is running, and start button when the timer is stopped.
-* [ ] Disable the reset button when it isn't useful.
+* [x] Display the pause button when the timer is running, and start button when the timer is stopped.
+* [x] Disable the reset button when it isn't useful.
 * [ ] Display the time in a [hh:]mm:ss format.
 * [ ] Make your timer keep track of time more accurately by using [`Date.now()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/now) instead of assuming exactly a second has passed.
 * [ ] Make it a count down timer, instead of a stopwatch.
